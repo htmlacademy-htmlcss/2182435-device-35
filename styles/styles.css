@@ -111,6 +111,7 @@ header {
     box-sizing: border-box;
     border-radius: 0 20px 20px 0;
     font: 400 16px/20px Rubik;
+    cursor: pointer;
 }
 
 .search-ico {
@@ -123,7 +124,7 @@ header {
 /* КАТАЛОГ */
 
 .catalog {
-    width: 517px;
+    width: 300px;
     order: 2;
     margin-top: 45px;
     position: relative;
@@ -143,8 +144,7 @@ header {
     top: 5px;
     background-color: #FFE17F;
     width: 1040px;
-    display: none;
-    /*---------тут ява меняет none / grid-----------*/
+    display: none;    /*--------- none / grid-----------*/
     grid-template-columns: 252px 211px 211px auto;
     grid-template-rows: repeat(3, 36px);
     grid-template-areas: "cat1 cat4 cat6"
@@ -152,6 +152,7 @@ header {
         "cat3 . .";
     align-items: center;
     padding: 20px 60px 48px 60px;
+    z-index: 2;
 }
 
 .catalog-list .catalog-item:nth-last-child(1) {
@@ -188,8 +189,8 @@ header {
 .catalog-button-black {
     position: absolute;
     bottom: -14px;
-    right: 224px;
-    z-index: 2;
+    right: 8px;
+    z-index: 3;
 }
 
 
@@ -202,6 +203,7 @@ header {
     margin: 0;
     margin-top: 45px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -241,12 +243,20 @@ header {
     justify-content: center;
 }
 
-.navigation-link-name {
-    display: none;
+.enter {
+    display: flex;
+
+    justify-content: space-between;
+}
+
+.navigation-link-enter-user {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .navigation-link-exit {
-    display: none;
+opacity: 30%;
 }
 
 .basket-ico {
@@ -332,10 +342,13 @@ header {
 /* СЛАЙД */
 
 .gallery-controls {
-position: absolute;
-top: 50%;
 display: flex;
 justify-content: space-between;
+width: 530px;
+margin: 0 auto;
+position: absolute;
+right: 0;
+top: 211px;
 }
 
 .slider-wrapper-2,
@@ -343,29 +356,40 @@ justify-content: space-between;
     display: none; /* ВКЛ/ВЫКЛ    */
 }
 
+.gallery-button {
+    margin: 0;
+    padding: 0;
+    border: none;
+   background-color: transparent;
+   cursor: pointer;
+}
+
 .slider-wrapper-1 {
     display: flex;
     justify-content: space-between;
+    position: relative;
 }
 
 .gallery {
     width: 560px;
     z-index: 1;
+    position: relative;
 }
 .slide-number {
     font: 700 180px/30px Rubik;
-    color: #df7171;
+    color: #ffffff;
     text-align: right;
-    background-color: #c7b26e;
-    width: 1160px;
-    height: 70px;
+    background-color: #FFE17F;
+    width: 1062px;
+    height: 65px;
     position: absolute;
-    display: flex;
+    top: 29px;
+    display: block;
     align-items: center;
     justify-content: end;
-    /*padding: 0 50px;
-    display: none;         -------------------------------       */
-}
+    padding: 0 49px;
+    padding-top: 55px;
+ }
 
 .slide-title {
     font: 800 50px/50px Raleway;
@@ -377,6 +401,7 @@ justify-content: space-between;
 .slide-description-wrapper {
     width: 560px;
     margin-top: 121px;
+    z-index: 1;
 }
 
 .slide-description {
