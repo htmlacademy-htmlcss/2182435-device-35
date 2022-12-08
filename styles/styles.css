@@ -65,6 +65,10 @@ body {
     top: 20px;
 }
 
+.logo-icon:hover {
+    opacity: 60%;
+}
+
 header {
     margin: 40px auto 0;
     padding-top: 46px;
@@ -121,7 +125,7 @@ header {
 }
 
 
-/* КАТАЛОГ */
+/* КАТАЛОГ РАСКРЫВАЮЩИЙСЯ */
 
 .catalog {
     width: 300px;
@@ -144,7 +148,8 @@ header {
     top: 5px;
     background-color: #FFE17F;
     width: 1040px;
-    display: none;    /*--------- none / grid-----------*/
+    display: none;
+    /*--------- none / grid-----------*/
     grid-template-columns: 252px 211px 211px auto;
     grid-template-rows: repeat(3, 36px);
     grid-template-areas: "cat1 cat4 cat6"
@@ -256,7 +261,7 @@ header {
 }
 
 .navigation-link-exit {
-opacity: 30%;
+    opacity: 30%;
 }
 
 .basket-ico {
@@ -290,6 +295,7 @@ opacity: 30%;
     min-height: 560px;
     margin: 0 auto;
     margin-top: -36px;
+    position: relative;
 }
 
 .slider-pagination {
@@ -299,6 +305,10 @@ opacity: 30%;
     margin: 0;
     padding: 0;
     margin-top: -30px;
+    z-index: 1;
+    position: absolute;
+    width: 1160px;
+    bottom: 6px;
 }
 
 .slider-pagination-item {
@@ -342,32 +352,48 @@ opacity: 30%;
 /* СЛАЙД */
 
 .gallery-controls {
-display: flex;
-justify-content: space-between;
-width: 530px;
-margin: 0 auto;
-position: absolute;
-right: 0;
-top: 211px;
+    display: flex;
+    justify-content: space-between;
+    width: 530px;
+    height: 60px;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    top: 211px;
 }
 
 .slider-wrapper-2,
 .slider-wrapper-3 {
-    display: none; /* ВКЛ/ВЫКЛ    */
+    display: none;
+    /* ВКЛ/ВЫКЛ    */
 }
 
 .gallery-button {
     margin: 0;
     padding: 0;
     border: none;
-   background-color: transparent;
-   cursor: pointer;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.gallery-button:hover {
+    opacity: 60%;
+}
+
+.gallery-button:focus-visible {
+    outline: 2px solid #AF4FFF;
+    outline-offset: 2px;
+}
+
+.gallery-button:active {
+    opacity: 30%;
 }
 
 .slider-wrapper-1 {
     display: flex;
     justify-content: space-between;
     position: relative;
+    margin-bottom: 63px;
 }
 
 .gallery {
@@ -375,6 +401,7 @@ top: 211px;
     z-index: 1;
     position: relative;
 }
+
 .slide-number {
     font: 700 180px/30px Rubik;
     color: #ffffff;
@@ -389,7 +416,8 @@ top: 211px;
     justify-content: end;
     padding: 0 49px;
     padding-top: 55px;
- }
+    pointer-events: none;
+}
 
 .slide-title {
     font: 800 50px/50px Raleway;
@@ -408,7 +436,7 @@ top: 211px;
     font: 400 18px/30px Rubik;
     margin: 0;
     padding: 0;
-    margin-bottom: 67px;
+    margin-bottom: 50px;
 }
 
 .slide-button {
@@ -416,12 +444,24 @@ top: 211px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     width: 220px;
-    height: 8px;
-    background-color: #FFE17F;
+    min-height: 40px;
+    background: linear-gradient(to bottom, #FFFFFF 40%, #FFE17F 40%, #FFE17F 60%, #FFFFFF 60%);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 65px;
+    margin-bottom: 50px;
+}
+
+.slide-button:hover {
+    background: #FFE17F;
+}
+
+.slide-button:focus-visible {
+    outline: 2px solid #AF4FFF;
+}
+
+.slide-button:active {
+    background: #FFCC33;
 }
 
 .slide-advantages {
@@ -430,17 +470,284 @@ top: 211px;
     gap: 20px;
     margin: 0;
     padding: 0;
-
 }
 
 .slide-advantages li {
     font: 400 36px/30px Rubik;
     max-width: 150px;
     margin: 0;
-      }
+}
 
 .slide-advantages p {
     font: 400 16px/30px Rubik;
     margin: 0;
     margin-top: 12px;
+}
+
+/* КАТАЛОГ В ЛИНИЮ */
+
+.catalog-line {
+    width: 1160px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+    margin-bottom: 82px;
+}
+
+.catalog-line .catalog-item {
+    width: 160px;
+}
+
+.catalog-line .catalog-item .catalog-logo {
+    min-height: 160px;
+    min-width: 160px;
+    object-fit: none;
+    background-color: #FFE17F;
+    margin-bottom: 26px;
+}
+
+.catalog-line .catalog-item .catalog-link {
+    width: 160px;
+    font: 800 18px/24px Raleway;
+    letter-spacing: -0.02em;
+    display: block;
+}
+
+.catalog-line .catalog-item .catalog-link:hover .catalog-logo {
+    background-color: #FFC700;
+}
+
+.catalog-line .catalog-item .catalog-link:focus-visible {
+    outline: 2px solid #AF4FFF;
+    outline-offset: 2px;
+}
+
+.catalog-line .catalog-item .catalog-link:active {
+    opacity: 30%;
+}
+
+.catalog-line .catalog-item:nth-child(2) .catalog-logo {
+    object-position: bottom;
+}
+
+/* ПРЕИМУЩЕСТВА */
+
+.advantages-wrapper {
+    margin: 0 auto 70px auto;
+    background: linear-gradient(to bottom, #FFFFFF 26%, #F0F0F0 26%);
+    padding-bottom: 72px;
+}
+
+.advantages {
+    width: 1160px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 280px auto;
+}
+
+.advantages-links {
+    font: 800 18px/21.13px Raleway;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    grid-column: 1 / 2;
+    align-self: center;
+    width: 164px;
+    height: 40px;
+    text-align: center;
+    background: linear-gradient(to bottom, #FFFFFF 40%, #FFE17F 40%, #FFE17F 60%, #FFFFFF 60%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 18px 0;
+    padding: 0;
+    border: none;
+}
+
+.active {
+    background: #000000;
+    color: #FFFFFF;
+    width: 287px;
+    padding: 0;
+    padding-right: 125px;
+}
+
+.advantages-links:hover {
+    background: #000000;
+    color: #FFFFFF;
+    width: 287px;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.advantages-links:focus-visible {
+    background: #000000;
+    color: #FFFFFF;
+    width: 287px;
+    padding-right: 30px;
+    padding-left: 30px;
+    outline: 2px solid #AF4FFF;
+    outline-offset: 2px;
+}
+
+.advantages dt:first-of-type .advantages-links {
+    margin-top: 65px;
+
+}
+
+.advantages dt:last-of-type .advantages-links {
+    margin-bottom: 64px;
+}
+
+.advantages-description {
+    font: 400 18px/30px Rubik;
+    grid-column: 2 / 3;
+    grid-row: 1 / -4;
+    width: 475px;
+    border-left: 7px solid rgb(0, 0, 0);
+    padding-left: 116px;
+    padding-top: 75px;
+    margin: 0;
+    position: relative;
+}
+
+.advantages-description b {
+    display: block;
+    font: 800 50px/50px Raleway;
+    margin-bottom: 34px;
+}
+
+.advantages .advantages-description:nth-child(2)::after {
+    content: "";
+    background-image: url("../images/index/delivery-section/delivery.svg");
+    background-repeat: no-repeat;
+    width: 136px;
+    height: 165px;
+    position: absolute;
+    top: 78px;
+    right: -219px;
+}
+
+.advantages .advantages-description:nth-child(4)::after {
+    content: "";
+    background-image: url("../images/index/delivery-section/guarantee.svg");
+    background-repeat: no-repeat;
+    width: 171px;
+    height: 195px;
+    position: absolute;
+    top: 62px;
+    right: -252px;
+}
+
+.advantages .advantages-description:nth-child(6)::after {
+    content: "";
+    background-image: url("../images/index/delivery-section/loan.svg");
+    background-repeat: no-repeat;
+    width: 171px;
+    height: 195px;
+    position: absolute;
+    top: 66px;
+    right: -268px;
+}
+
+.advantages .advantages-description:nth-child(2) {}
+
+
+.advantages .advantages-description:nth-child(4) {
+    display: none;
+}
+
+.advantages .advantages-description:nth-child(6) {
+    display: none;
+}
+
+/*ДОСТАВКА*/
+
+.delivery {
+    display: block;
+    width: 1160px;
+    background-color: #F0F0F0;
+    font: 800 20px/23px Raleway;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 auto 70px auto;
+    padding: 38px 0;
+    position: relative;
+}
+
+.delivery::before {
+    content: "";
+    background-image: url("../images/index/delivery-section/delivery-icon.svg");
+    background-color: #FFE17F;
+    background-repeat: no-repeat;
+    width: 125px;
+    height: 100px;
+    background-position: 50% 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.delivery::after {
+    content: "";
+    background-color: rgba(220, 220, 220, 0.8);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    right: 42px;
+    top: 29px;
+}
+
+.i-ico {
+    opacity: 30%;
+    position: absolute;
+    right: 62px;
+    top: 43px;
+    z-index: 1;
+}
+
+.delivery:hover::before {
+    background-color: #FFC700;
+    ;
+}
+
+.delivery:hover .i-ico {
+    opacity: 1;
+}
+
+.delivery:focus-visible {
+    outline: 2px solid #AF4FFF;
+    outline-offset: 2px;
+}
+
+
+.delivery:active {
+    opacity: 30%;
+}
+
+/*ОНАС КОНТАКТЫ*/
+
+.about-cont {
+    width: 1160px;
+    margin: 0 auto;
+    display: flex;
+    font: 400 18px/30px Rubik;
+}
+
+.about h2 {
+    font: 800 50px/50px Raleway;
+    margin: 0;
+}
+
+.cont address {
+    font-style: normal;
+}
+
+.cont h2 {
+    font: 800 50px/50px Raleway;
+    margin: 0;
 }
