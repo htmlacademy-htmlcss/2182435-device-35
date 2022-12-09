@@ -736,18 +736,131 @@ header {
     margin: 0 auto;
     display: flex;
     font: 400 18px/30px Rubik;
+    justify-content: space-between;
 }
 
-.about h2 {
+.about {
+    width: 520px;
+    position: relative;
+}
+
+.cont {
+    width: 532px;
+    position: relative;
+}
+
+.about h2,
+.cont h2 {
     font: 800 50px/50px Raleway;
-    margin: 0;
+    margin: 47px 0 48px 0;
+}
+
+.about-title::before,
+.cont-title::before {
+    content: "";
+    background-color: #000000;
+    width: 84px;
+    height: 7px;
+    position: absolute;
+    top: 0;
+}
+
+.about p,
+.cont p {
+    margin: 0 0 30px 0;
+}
+
+.cont b {
+    display: block;
+    font: 700 24px/30px Rubik;
+    margin-bottom: 15px;
 }
 
 .cont address {
     font-style: normal;
 }
 
-.cont h2 {
-    font: 800 50px/50px Raleway;
+.about ul {
     margin: 0;
+    padding: 0;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.about ul li {
+    font: 700 18px/20px Rubik;
+    letter-spacing: -0.01em;
+    margin: 0;
+    margin-bottom: 19px;
+    margin-left: 36px;
+}
+
+.about ul li::before {
+    content: "•";
+    color: #FFC700;
+    padding-right: 23px;
+    font-size: 32px;
+    position: absolute;
+    left: 0;
+}
+
+.about a {
+    font: 800 18px/21px Raleway;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    width: 270px;
+    height: 40px;
+    background: linear-gradient(to bottom, #FFFFFF 40%, #FFE17F 40%, #FFE17F 60%, #FFFFFF 60%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.about a:hover {
+    background:#FFE17F;
+}
+
+.about a:focus-visible {
+    outline: 2px solid #AF4FFF;
+    outline-offset: 2px;
+}
+
+.about a:active {
+    background:#FFCC33;
+}
+
+.cont ul {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 29px;
+}
+
+.contacts-phone {
+    text-decoration: underline;
+}
+
+.cont > a {
+    font: 800 18px/21px Raleway;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    width: 259px;
+    height: 40px;
+    background: linear-gradient(to bottom, #FFFFFF 40%, #FFE17F 40%, #FFE17F 60%, #FFFFFF 60%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.cont > a:hover {
+    background:#FFE17F;
+}
+
+.cont > a:focus-visible {
+    outline: 2px solid #AF4FFF;
+    outline-offset: 2px;
+}
+
+.cont > a:active {
+    background:#FFCC33;
 }
