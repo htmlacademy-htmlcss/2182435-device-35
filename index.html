@@ -31,7 +31,8 @@
               d="m15.7 15.002-3.1-3.1c.9-1.2 1.4-2.6 1.4-4.2 0-3.9-3.1-7-7-7s-7 3.1-7 7 3.1 7 7 7c1.6 0 3-.5 4.2-1.4l3.1 3.1c.2.2.4.3.7.3.6 0 1-.4 1-1 0-.2-.1-.5-.3-.7ZM2 7.702c0-2.8 2.2-5 5-5s5 2.2 5 5-2.2 5-5 5-5-2.2-5-5Z" />
           </svg>
           <label class="visually-hidden" for="search-label">Поиск по сайту.</label>
-          <div class="search-input-wrap"><input class="search-input" placeholder="Поиск по сайту" type="text" name="site-search" id="search-label"></div>
+          <div class="search-input-wrap"><input class="search-input" placeholder="Поиск по сайту" type="text"
+              name="site-search" id="search-label"></div>
           <button class="search-button" type="submit" name="site-search-button">Найти</button>
         </form>
 
@@ -112,39 +113,49 @@
             Сравнить
           </a>
 
-          <a class="navigation-link-basket" href="#">
-            <svg class="basket-ico" xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="none"
-              viewBox="0 0 16 14">
-              <path fill="#000"
-                d="m15.3 5-3.5.2L8.6.3C8.5.1 8.2 0 8 0c-.2 0-.5.1-.6.3L4.2 5.2H.7c-.4 0-.7.3-.7.7v.2l1.9 6.8c.2.7.7 1.1 1.4 1.1h9.4c.7 0 1.2-.4 1.4-1.1L16 6v-.2c0-.4-.3-.8-.7-.8ZM8 1.9l2.2 3.2H5.9L8 1.9Z" />
-            </svg>
-            Корзина
-            <span class="in-basket">2</span>
-          </a>
+          <div class="wrap-basket">
+            <a class="navigation-link-basket" href="#">
+              <svg class="basket-ico" xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="none"
+                viewBox="0 0 16 14">
+                <path fill="#000"
+                  d="m15.3 5-3.5.2L8.6.3C8.5.1 8.2 0 8 0c-.2 0-.5.1-.6.3L4.2 5.2H.7c-.4 0-.7.3-.7.7v.2l1.9 6.8c.2.7.7 1.1 1.4 1.1h9.4c.7 0 1.2-.4 1.4-1.1L16 6v-.2c0-.4-.3-.8-.7-.8ZM8 1.9l2.2 3.2H5.9L8 1.9Z" />
+              </svg>
+              Корзина
+              <span class="in-basket">2</span>
+            </a>
 
-
-          <div class="basket-popover">
-
-            <ul class="shopping-list">
-              <li class="basket-products-item">
-                <a class="basket-products-link basket-products-selfie-stick-amateur" href="#">Любительская селфи-палка</a>
-                <button class="basket-products-delete" type="button">✖</button>
-              </li>
-              <li class="basket-products-item">
-                <a class="basket-products-link basket-products-selfie-stick-prof" href="#">Профессиональная селфи-палка</a>
-                <button class="basket-products-delete" type="button">✖</button>
-              </li>
-            </ul>
-
-            <div class="counters">
-              <p>Товаров: <b class="number-of-products">2</b></p>
-              <p>Сумма: <b class="total-amount">2000</b> ₽</p>
+            <div class="basket-popover">
+              <ul class="shopping-list">
+                <li class="basket-products-item">
+                  <a class="basket-products-link basket-products-selfie-stick-amateur" href="#">Любительская
+                    селфи-палка</a>
+                  <button class="basket-products-delete" type="button"><span class="visually-hidden">Удалить</span>
+                    <svg class="remove-from-trash" xmlns="http://www.w3.org/2000/svg" width="10" height="11"
+                      fill="none">
+                      <path fill="#fff"
+                        d="m10 1.076-.91-.91L5 4.259.91.167 0 1.076l4.09 4.09L0 9.259l.91.909L5 6.076l4.09 4.09.91-.908-4.09-4.091L10 1.076Z" />
+                    </svg>
+                  </button>
+                </li>
+                <li class="basket-products-item">
+                  <a class="basket-products-link basket-products-selfie-stick-prof" href="#">Профессиональная
+                    селфи-палка</a>
+                  <button class="basket-products-delete" type="button"><span class="visually-hidden">Удалить</span>
+                    <svg class="remove-from-trash" xmlns="http://www.w3.org/2000/svg" width="10" height="11"
+                      fill="none">
+                      <path fill="#fff"
+                        d="m10 1.076-.91-.91L5 4.259.91.167 0 1.076l4.09 4.09L0 9.259l.91.909L5 6.076l4.09 4.09.91-.908-4.09-4.091L10 1.076Z" />
+                    </svg>
+                  </button>
+                </li>
+              </ul>
+              <div class="counters">
+                <span>Товаров: <b class="number-of-products">2</b></span>
+                <span>Сумма: <b class="total-amount">2000</b> ₽</span>
+              </div>
+              <a class="open-basket" href="#">Открыть корзину</a>
             </div>
-
-            <a class="open-basket" href="#">Открыть корзину</a>
-
           </div>
-
 
         </div>
 
@@ -404,6 +415,41 @@
       </div>
 
     </footer>
+
+    <div class="modal-delivery-container">
+
+      <div class="modal-delivery">
+        <button class="modal-close-button">
+          <span class="visually-hidden">Закрыть форму</span>
+        </button>
+        <h2 class="modal-title">Доставка под заказ</h2>
+        <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
+          <label>
+            Ваше имя:
+            <input required type="text" name="name" placeholder="Введите имя">
+          </label>
+          <label>
+            Ваш e-mail:
+            <input required type="email" name="mail" placeholder="Введите e-mail">
+          </label>
+          <label>
+            Что нужно привезти:
+            <input required type="text" name="request" placeholder="В свободной форме">
+          </label>
+          <div class="quantity-wrap">
+            <label> Количество:
+              <input class="quantity-num" required type="number" value="1" min="1" name="quantity">
+            </label>
+            <button class="quantity-minus" type="button"><span class="visually-hidden">Больше</span></button>
+            <button class="quantity-plus" type="button"><span class="visually-hidden">Меньше</span></button>
+          </div>
+          <button type="submit">Отправить</button>
+        </form>
+      </div>
+
+    </div>
+
+
 
   </body>
 

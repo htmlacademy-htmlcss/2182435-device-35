@@ -360,7 +360,7 @@ display: grid;
     padding: 0;
 }
 
-.navigation-user:focus-within .basket-popover {
+.wrap-basket:focus-within .basket-popover {
     display: flex;
 }
 
@@ -415,8 +415,9 @@ display: grid;
     background-color: transparent;
     border: 0;
     margin: 0;
-    padding: 0;
-    margin-top: -4px;
+    padding: 5px;
+    margin-top: -5px;
+    margin-right: -5px;
     cursor: pointer;
 }
 
@@ -428,11 +429,11 @@ display: grid;
     background-color: #1A1A1A;
 }
 
-.counters p {
+.counters span {
     margin: 0 20px 0 20px;
 }
 
-.counters p b {
+.counters span b {
     font-weight: normal;
 }
 
@@ -446,7 +447,35 @@ display: grid;
     background-color: #ffffff;
     padding: 15px 0 15px 0;
     margin: 20px;
+}
 
+.basket-products-link:hover,
+.basket-products-delete:hover {
+    opacity: 60%;
+}
+
+.basket-products-link:focus-visible,
+.basket-products-delete:focus-visible {
+    outline: 2px solid #AF4FFF;
+    outline-offset: 2px;
+}
+
+.basket-products-link:active,
+.basket-products-delete:active {
+    opacity: 30%;
+}
+
+.open-basket:hover {
+  background-color: #FFE17F;
+}
+
+.open-basket:focus-visible {
+    outline: 2px solid #AF4FFF;
+    outline-offset: 2px;
+}
+
+.open-basket:active {
+    color: rgba(0, 0, 0, 50%);
 }
 
 /* НАВ ВХОД */
@@ -1419,3 +1448,50 @@ display: grid;
     border-bottom: 2px solid #FFC700;
     opacity: 0.3;
 }
+
+
+/* МОДАЛЬНОЕ ОКНО */
+
+.modal-delivery-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(240, 240, 240, 0.9);
+    z-index: 3;
+  }
+
+  .modal-delivery {
+    position: relative;
+    margin: auto;
+    padding: 72px 80px;
+    background-color: #ffffff;
+    border: 10px solid #000000;
+     }
+
+  .modal-form label {
+    font: 700 18px/20px Rubik;
+    letter-spacing: -0.02em;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .modal-close-button {
+    background-image: url(../images/modal/close.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 0;
+    width: 26px;
+    height: 26px;
+    padding: 0;
+    position: absolute;
+    right: 80px;
+    cursor: pointer;
+  }
+
+  .modal-title {
+    font: 800 50px/50px Raleway;
+    margin: 0;
+  }
