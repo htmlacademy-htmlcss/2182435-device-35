@@ -9,7 +9,7 @@
 
   <body>
 
-    <header>
+    <header class="header-common">
 
       <nav class="container-header">
 
@@ -37,20 +37,8 @@
         </form>
 
         <section class="catalog">
-          <a class="navigation-link" href="#">
+          <a class="navigation-link closed" href="#">
             <h2>Каталог товаров</h2>
-            <svg class="catalog-button-black" width="50" height="51" viewBox="0 0 50 51" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <circle cx="25" cy="25.787" r="24" stroke="black" stroke-width="2" />
-              <g clip-path="url(#clip0_11423_1729)">
-                <path d="M33 24.787H26V17.787H24V24.787H17V26.787H24V33.787H26V26.787H33V24.787Z" fill="black" />
-              </g>
-              <defs>
-                <clipPath id="clip0_11423_1729">
-                  <rect width="16" height="16" fill="white" transform="translate(17 17.787)" />
-                </clipPath>
-              </defs>
-            </svg>
           </a>
 
           <ul class="catalog-list">
@@ -168,7 +156,7 @@
       <section class="slider">
         <h3 class="visually-hidden">Наши лучшие предложения!</h3>
 
-        <article class="slider-wrapper-1">
+        <article class="slider-wrapper quadro">
           <h4 class="visually-hidden">Квадрокоптер с лазерной пушкой</h4>
           <div class="slide-number">01</div>
           <div class="gallery">
@@ -193,7 +181,6 @@
             </div>
           </div>
           <aside class="slide-description-wrapper">
-
             <h5 class="slide-title"> Порхает как бабочка, жалит как пчела!</h5>
             <p class="slide-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером,
               замаскированным под стандартную камеру.</p>
@@ -208,11 +195,78 @@
           </aside>
         </article>
 
-        <article class="slider-wrapper-2">
+        <article class="slider-wrapper fitnes  active-slide">
           <h4 class="visually-hidden">Фитнес браслет</h4>
+          <div class="slide-number">02</div>
+          <div class="gallery">
+            <img class="gallery-image" src="/images/index/popular-products/fitness-bracelet.png" alt="Фитнес-браслет."
+              width="560" height="560">
+            <div class="gallery-controls">
+              <button class="gallery-button" type="button">
+                <svg width="20" height="60" viewBox="0 0 20 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path class="arrow-left" d="M20 60H16.5L0 30L16.5 0H20L3.8 30L20 60Z" fill="black" />
+                </svg>
+                <span class="visually-hidden">Предыдущее фото</span>
+              </button>
+              <button class="gallery-button" type="button">
+                <svg class="arrow-right" width="20" height="60" viewBox="0 0 20 60" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M-5.24537e-06 1.74846e-06L3.49999 1.44248e-06L20 30L3.5 60L0 60L16.2 30L-5.24537e-06 1.74846e-06Z"
+                    fill="black" />
+                </svg>
+                <span class="visually-hidden">Следующее фото</span>
+              </button>
+            </div>
+          </div>
+          <aside class="slide-description-wrapper">
+            <h5 class="slide-title"> Худеем<br>правильно!</h5>
+            <p class="slide-description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и
+              соблюдать диету.</p>
+            <a class="slide-button" href="#">ПОДРОБНЕЕ</a>
+            <p class="visually-hidden">свойства</p>
+            <ul class="slide-advantages">
+              <li>48 часов<p>Без подзарядки</p>
+            </ul>
+          </aside>
         </article>
-        <article class="slider-wrapper-2">
+
+        <article class="slider-wrapper selfie">
           <h4 class="visually-hidden">Длиннющая селфи палка</h4>
+          <div class="slide-number">03</div>
+          <div class="gallery">
+            <img class="gallery-image" src="/images/index/popular-products/selfie-stick.png" alt="Cелфи палка."
+              width="560" height="560">
+            <div class="gallery-controls">
+              <button class="gallery-button" type="button">
+                <svg width="20" height="60" viewBox="0 0 20 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path class="arrow-left" d="M20 60H16.5L0 30L16.5 0H20L3.8 30L20 60Z" fill="black" />
+                </svg>
+                <span class="visually-hidden">Предыдущее фото</span>
+              </button>
+              <button class="gallery-button" type="button">
+                <svg class="arrow-right" width="20" height="60" viewBox="0 0 20 60" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M-5.24537e-06 1.74846e-06L3.49999 1.44248e-06L20 30L3.5 60L0 60L16.2 30L-5.24537e-06 1.74846e-06Z"
+                    fill="black" />
+                </svg>
+                <span class="visually-hidden">Следующее фото</span>
+              </button>
+            </div>
+          </div>
+          <aside class="slide-description-wrapper">
+            <h5 class="slide-title"> Делай селфи,<br>как Бен Стиллер!</h5>
+            <p class="slide-description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!)
+              метров длиной и весом всего 5 кг.</p>
+            <a class="slide-button" href="#">ПОДРОБНЕЕ</a>
+            <p class="visually-hidden">свойства</p>
+            <ul class="slide-advantages">
+              <li>8,5 м<p>Длина палки</p>
+              <li>5 кг<p>Вес палки</p>
+              <li>Карбон<p>Материал</p>
+            </ul>
+          </aside>
         </article>
 
         <ol class="slider-pagination">
@@ -424,26 +478,32 @@
         </button>
         <h2 class="modal-title">Доставка под заказ</h2>
         <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
-          <label>
+          <label class="name">
             Ваше имя:
             <input required type="text" name="name" placeholder="Введите имя">
           </label>
-          <label>
+          <label class="mail">
             Ваш e-mail:
-            <input required type="email" name="mail" placeholder="Введите e-mail">
+            <input class="mail-eror" required type="email" name="mail" placeholder="Введите e-mail">
           </label>
-          <label>
+          <label class="request">
             Что нужно привезти:
             <input required type="text" name="request" placeholder="В свободной форме">
           </label>
+
           <div class="quantity-wrap">
-            <label> Количество:
-              <input class="quantity-num" required type="number" value="1" min="1" name="quantity">
-            </label>
-            <button class="quantity-minus" type="button"><span class="visually-hidden">Больше</span></button>
-            <button class="quantity-plus" type="button"><span class="visually-hidden">Меньше</span></button>
+            <label for="number"> Количество:</label>
+            <div class="number-wrap number-eror">
+              <button class="number-minus" type="button"
+                onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">-</button>
+              <input type="number" id="number" min="1" value="1" min="1" required name="quantity">
+              <button class="number-plus" type="button"
+                onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">+</button>
+            </div>
           </div>
-          <button type="submit">Отправить</button>
+
+
+          <button class="submit-form" type="submit">Отправить</button>
         </form>
       </div>
 

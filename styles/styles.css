@@ -36,6 +36,10 @@ body {
     margin: 0;
 }
 
+.scroll-lock {
+    overflow: hidden;
+}
+
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -72,10 +76,10 @@ body {
     opacity: 30%;
 }
 
-header {
+.header-common {
     margin: 40px auto 0;
     padding-top: 46px;
-    padding-bottom: 34px;
+    padding-bottom: 19px;
     width: 1160px;
     background-color: #FFE17F;
 }
@@ -172,15 +176,34 @@ header {
     padding: 15px 0;
 }
 
+.closed::after {
+    content: url(../images/header/button-black.svg);
+    height: 51px;
+    position: absolute;
+    right: 7px;
+    top: 50%;
+    transform: translate(0, -50%);
+    opacity: 30%;
+}
+
+.open::after {
+    content: url(../images/header/minus-button-black.svg);
+    height: 51px;
+    position: absolute;
+    right: 7px;
+    top: 50%;
+    transform: translate(0, -50%);
+    opacity: 30%;
+}
+
 .catalog:focus-within .catalog-list {
-display: grid;
+    display: grid;
 }
 
 .catalog {
     width: 300px;
     order: 2;
     position: relative;
-    display: ;
 }
 
 .catalog h2 {
@@ -383,7 +406,7 @@ display: grid;
     width: 172px;
     min-height: 43px;
     padding-left: 63px;
-    }
+}
 
 .basket-popover::after {
     content: "";
@@ -394,7 +417,7 @@ display: grid;
     top: -4px;
     left: 155px;
     background-color: #000000;
-    }
+}
 
 .basket-products-selfie-stick-amateur {
     background-image: url(../images/header/tooltip/selfie-amateur.png);
@@ -466,7 +489,7 @@ display: grid;
 }
 
 .open-basket:hover {
-  background-color: #FFE17F;
+    background-color: #FFE17F;
 }
 
 .open-basket:focus-visible {
@@ -531,7 +554,7 @@ display: grid;
     width: 1160px;
     min-height: 560px;
     margin: 0 auto;
-    margin-top: -50px;
+    margin-top: -35px;
     position: relative;
 }
 
@@ -600,12 +623,6 @@ display: grid;
     top: 211px;
 }
 
-.slider-wrapper-2,
-.slider-wrapper-3 {
-    display: none;
-    /* ВКЛ/ВЫКЛ    */
-}
-
 .gallery-button {
     margin: 0;
     padding: 0;
@@ -627,11 +644,16 @@ display: grid;
     opacity: 30%;
 }
 
-.slider-wrapper-1 {
-    display: flex;
+.slider-wrapper {
+    display: none;
     justify-content: space-between;
     position: relative;
     margin-bottom: 63px;
+}
+
+.active-slide {
+    display: flex;
+    /* ВКЛ/ВЫКЛ    */
 }
 
 .gallery {
@@ -714,7 +736,6 @@ display: grid;
 
 .slide-advantages li {
     font: 400 36px/30px Rubik;
-    max-width: 150px;
     margin: 0;
     list-style-type: none;
 }
@@ -1183,6 +1204,11 @@ display: grid;
 .field:focus-visible {
     outline: 2px solid #AF4FFF;
     outline-offset: 2px;
+    z-index: 2;
+}
+
+.field-eror {
+    border-bottom: 3px solid red;
 }
 
 .newsletter-button {
@@ -1456,29 +1482,94 @@ display: grid;
     position: fixed;
     top: 0;
     left: 0;
-    display: flex;
+    display: none;
+    /* ВКЛ / ВЫКЛ */
     width: 100%;
     height: 100%;
     background-color: rgba(240, 240, 240, 0.9);
     z-index: 3;
-  }
+}
 
-  .modal-delivery {
+.modal-delivery {
     position: relative;
     margin: auto;
-    padding: 72px 80px;
+    padding: 64px 70px;
     background-color: #ffffff;
     border: 10px solid #000000;
-     }
+    width: 760px;
+    display: flex;
+    flex-direction: column;
+}
 
-  .modal-form label {
+.modal-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 62px 40px;
+}
+
+.modal-form label input {
+    margin: 0;
+    padding: 20px;
+    background-color: #F0F0F0;
+    border: 0;
+    font: 400 16px/20px Rubik;
+    margin-top: 14px;
+}
+
+.modal-form label input:hover {
+    background-color: #DCDCDC;
+}
+
+.modal-form label input:focus-visible {
+    outline: 2px solid #AF4FFF;
+    outline-offset: 2px;
+}
+
+.modal-form .name {
+    width: 360px;
+}
+
+.modal-form .name input {
+    background-image: url(../images/modal/name.svg);
+    background-repeat: no-repeat;
+    background-position: center right 21px;
+}
+
+.modal-form .mail {
+    width: 360px;
+    position: relative;
+}
+
+.modal-form .mail input {
+    background-image: url(../images/modal/mail.svg);
+    background-repeat: no-repeat;
+    background-position: center right 21px;
+}
+
+.modal-form .mail::after {
+    content: 'Забавный у вас адрес';
+    font: 400 14px/20px Rubik;
+    color: red;
+    position: absolute;
+    bottom: -23px;
+}
+
+.modal-form .mail .mail-eror {
+    outline: 2px solid red;
+}
+
+.modal-form .request {
+    width: 540px;
+}
+
+.modal-form label {
     font: 700 18px/20px Rubik;
     letter-spacing: -0.02em;
     display: flex;
     flex-direction: column;
-  }
+}
 
-  .modal-close-button {
+.modal-close-button {
     background-image: url(../images/modal/close.svg);
     background-repeat: no-repeat;
     background-position: center;
@@ -1487,11 +1578,406 @@ display: grid;
     height: 26px;
     padding: 0;
     position: absolute;
-    right: 80px;
+    right: 70px;
+    top: 74px;
     cursor: pointer;
-  }
+}
 
-  .modal-title {
+.modal-close-button:hover {
+    opacity: 60%;
+}
+
+.modal-close-button:focus-visible {
+    outline: 2px solid #AF4FFF;
+    outline-offset: 2px;
+}
+
+.modal-close-button:active {
+    opacity: 30%;
+}
+
+.modal-title {
     font: 800 50px/50px Raleway;
     margin: 0;
-  }
+    margin-bottom: 42px;
+}
+
+.quantity-wrap {
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+    position: relative;
+}
+
+.quantity-wrap label {
+    background-image: url(../images/modal/i-ico.svg);
+    background-repeat: no-repeat;
+    background-position: center right 33px;
+    cursor: pointer;
+    padding: 3px 0;
+    margin: -3px 0;
+}
+
+.quantity-wrap label::before {
+    content: "Постараемся найти, сколько нужно. Привезём сколько получится по требованиям к провозу багажа.";
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 1) 10%), url(../images/modal/tooltip.svg);
+    background-repeat: no-repeat;
+    color: #FFFFFF;
+    font: 400 16px/20px Rubik;
+    padding: 18px;
+    width: 164px;
+    position: absolute;
+    top: 31px;
+    left: -18px;
+    display: none;
+}
+
+.quantity-wrap label:hover::before {
+    display: block;
+}
+
+.number-wrap {
+    display: flex;
+    margin-top: 14px;
+    width: 180px;
+}
+
+.number-eror {
+    outline: 2px solid red;
+}
+
+.number-wrap button:hover {
+    background-color: #EBEBEB;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.number-wrap input:hover {
+    background-color: #DCDCDC;
+}
+
+.number-wrap button:focus-visible,
+.number-wrap input:focus-visible {
+    outline: 2px solid #AF4FFF;
+    outline-offset: 2px;
+    z-index: 1;
+}
+
+.number-wrap button:active {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.number-wrap input {
+    font: 400 16px/20px Rubik;
+    text-align: center;
+    padding: 20px;
+    background-color: #F0F0F0;
+    border: 0;
+    width: 20px;
+}
+
+.number-wrap input[type="number"]::-webkit-outer-spin-button,
+.number-wrap input[type="number"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+.number-plus,
+.number-minus {
+    font: 400 29px/20px Rubik;
+    text-align: center;
+    padding: 20px;
+    background-color: #F0F0F0;
+    border: 0;
+    width: 60px;
+    cursor: pointer;
+}
+
+.submit-form {
+    font: 800 18px/21px Raleway;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    width: 200px;
+    min-height: 40px;
+    background: linear-gradient(to bottom, #FFFFFF 40%, #FFE17F 40%, #FFE17F 60%, #FFFFFF 60%);
+    border: 0;
+    margin-top: -20px;
+}
+
+.submit-form:hover {
+    background: #FFE17F;
+}
+
+.submit-form:focus-visible {
+    outline: 2px solid #AF4FFF;
+    outline-offset: 2px;
+}
+
+.submit-form:active {
+    background: #FFCC33;
+}
+
+
+/*------------------------------------------------- МОНОПОДЫ СТР----------------------------------------------------*/
+
+
+/*  ХЕДЕР  */
+
+.monopods-header {
+    width: 1040px;
+    margin: 0 auto;
+    margin-top: 36px;
+}
+
+.monopods-header-title {
+    font: 800 50px/50px Raleway;
+    margin: 0;
+    padding: 0;
+}
+
+.breadcrumbs {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin-top: 13px;
+    margin-bottom: 32px;
+}
+
+.breadcrumbs-link {
+    font: 400 16px/20px Rubik;
+    color: #000000;
+    text-decoration: none;
+}
+
+.breadcrumbs-item {
+    list-style-type: none;
+    margin-right: 36px;
+}
+
+/*  ФИЛЬТР  */
+
+.wrap-filter-prod {
+    display: flex;
+    background-color: #F0F0F0;
+    justify-content: center;
+}
+
+.wrap-filter {
+    width: 320px;
+}
+
+.monopods-filter {
+    width: 210px;
+    margin: 0 auto;
+}
+
+.monopods-filter h3 {
+    font: 800 16px/18px Raleway;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.filter-title {
+    font: 700 18px/20px Rubik;
+    letter-spacing: -0.02em;
+}
+
+.control {
+    font: 400 16px/20px Rubik;
+}
+
+.filter-group {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-top: #000000 solid 2px;
+}
+
+.wrap-sort-prod-pag {
+    width: 840px;
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-list {
+    margin: 0;
+    padding: 0;
+}
+
+.filter-item {
+    list-style-type: none;
+}
+
+.monopods-filter .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: 800 18px/21px Raleway;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    width: 220px;
+    min-height: 40px;
+    background: linear-gradient(to bottom, transparent 40%, #FFE17F 40%, #FFE17F 60%, transparent 60%);
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+
+/*  СОРТИРОВКА  */
+
+.sorting {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.sorting h3 {
+    font: 800 16px/18px Raleway;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.select-control {
+    background-color: transparent;
+    border: 0;
+    font: 400 18px/30px Rubik;
+}
+
+.button-to-more {
+    background: url(../images/catalog/min-max.svg) no-repeat center;
+    opacity: 20%;
+    border: 0;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.button-to-lesser {
+    background: url(../images/catalog/min-max.svg) no-repeat center;
+    opacity: 20%;
+    border: 0;
+    width: 30px;
+    height: 30px;
+    transform: rotate(180deg);
+    cursor: pointer;
+}
+
+/*  КАРТОЧКИ  */
+
+.product-list {
+    margin: 0;
+    padding: 70px 40px 46px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    background-color: white;
+    list-style-type: none;
+}
+
+.product-card-link {
+    color: black;
+    text-decoration: none;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 360px;
+    justify-content: space-between;
+}
+
+.product-card-title {
+    font: 700 18px/20px Rubik;
+    letter-spacing: -0.02em;
+    width: 209px;
+    margin: 0;
+}
+
+.product-card-link b {
+    position: absolute;
+    top: 0;
+    display: flex;     /* ----------      КНОПКА       ----------*/
+    justify-content: center;
+    align-items: center;
+    font: 800 18px/21px Raleway;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    width: 220px;
+    min-height: 40px;
+    background: linear-gradient(to bottom, transparent 40%, #FFE17F 40%, #FFE17F 60%, transparent 60%);
+}
+
+.product-card-link span {
+    font: 400 18px/21px Rubik;
+}
+
+.product-card-link img {
+    margin-bottom: 32px;
+}
+
+
+/*  ПАГИНАЦИЯ  */
+
+.wrap-pagination-all {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 0 40px;
+    padding-bottom: 77px;
+}
+
+.wrap-pagination {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.pagination {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.button-pagination-show-more {
+    font: 800 16px/18px Raleway;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 16px 0;
+    background-color: #ffffff;
+    border: 3px solid #E5E5E5;
+    margin-bottom: 44px;
+}
+
+.pagination-item {
+
+}
+
+.pagination-prev,
+.pagination-next {
+    font: 800 18px/21px Raleway;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000000;
+    padding: 25px;
+}
+
+.pagination-disabled {
+opacity: 30%;
+}
+
+.pagination-link {
+    font: 400 16px/20px Rubik;
+    text-decoration: none;
+    color: #000000;
+    opacity: 30%;
+    min-width: 40px;
+    min-height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination-current {
+    opacity: 100%;
+}
