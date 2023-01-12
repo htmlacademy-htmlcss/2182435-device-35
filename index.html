@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <html lang="ru">
-
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="./images/favicon.png">
   </head>
-
   <body>
-
     <header class="header-common">
-
       <nav class="container-header">
-
-
         <a class="logo" href="#">
           <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" width="145" height="36" fill="none"
             viewBox="0 0 145 36">
@@ -22,7 +18,6 @@
             <path fill="#510094" d="M83.458 0v10.1L91.063 0h-7.605Z" />
           </svg>
         </a>
-
         <form class="search" action="https://echo.htmlacademy.ru/" method="get">
           <svg class="search-ico" xmlns="http://www.w3.org/2000/svg" width="16" height="17" fill="none"
             viewBox="0 0 16 17">
@@ -34,15 +29,13 @@
               name="site-search" id="search-label"></div>
           <button class="search-button" type="submit" name="site-search-button">Найти</button>
         </form>
-
         <section class="catalog">
           <a class="navigation-link closed" href="#">
             <h2>Каталог товаров</h2>
           </a>
-
           <ul class="catalog-list">
             <li class="catalog-item">
-              <a class="catalog-link active" href="#">Виртуальная реальность</a>
+              <a class="catalog-link" href="#">Виртуальная реальность</a>
             </li>
             <li class="catalog-item">
               <a class="catalog-link" href="#">Моноподы для cелфи</a>
@@ -61,10 +54,9 @@
             </li>
           </ul>
         </section>
-
         <ul class="navigation-service">
           <li class="navigation-item">
-            <a class="navigation-link active" href="#">
+            <a class="navigation-link" href="#">
               <h2>ДОСТАВКА</h2>
             </a>
           </li>
@@ -79,7 +71,6 @@
             </a>
           </li>
         </ul>
-
         <div class="enter">
           <a class="navigation-link-enter-user" href="#">
             <svg class="enter-ico" xmlns="http://www.w3.org/2000/svg" width="13" height="12" fill="none"
@@ -90,7 +81,6 @@
             Коля Петухов</a>
           <a class="navigation-link-exit" href="#">Выйти</a>
         </div>
-
         <div class="navigation-user">
           <a class="navigation-link-comparison" href="#">
             <svg class="comparison-ico" xmlns="http://www.w3.org/2000/svg" width="10" height="12" fill="none"
@@ -99,7 +89,6 @@
             </svg>
             Сравнить
           </a>
-
           <div class="wrap-basket">
             <a class="navigation-link-basket" href="#">
               <svg class="basket-ico" xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="none"
@@ -110,7 +99,6 @@
               Корзина
               <span class="in-basket">2</span>
             </a>
-
             <div class="basket-popover">
               <ul class="shopping-list">
                 <li class="basket-products-item">
@@ -143,19 +131,15 @@
               <a class="open-basket" href="#">Открыть корзину</a>
             </div>
           </div>
-
         </div>
-
       </nav>
-
     </header>
 
     <main>
       <h1 class="visually-hidden">Магазин персональных гаджетов «Девайс»</h1>
       <section class="slider">
         <h3 class="visually-hidden">Наши лучшие предложения!</h3>
-
-        <article class="slider-wrapper quadro">
+        <article class="slider-wrapper quadro active-slide">
           <h4 class="visually-hidden">Квадрокоптер с лазерной пушкой</h4>
           <div class="slide-number">01</div>
           <div class="gallery">
@@ -193,8 +177,7 @@
             </ul>
           </aside>
         </article>
-
-        <article class="slider-wrapper fitnes  active-slide">
+        <article class="slider-wrapper fitnes">
           <h4 class="visually-hidden">Фитнес браслет</h4>
           <div class="slide-number">02</div>
           <div class="gallery">
@@ -229,7 +212,6 @@
             </ul>
           </aside>
         </article>
-
         <article class="slider-wrapper selfie">
           <h4 class="visually-hidden">Длиннющая селфи палка</h4>
           <div class="slide-number">03</div>
@@ -267,7 +249,6 @@
             </ul>
           </aside>
         </article>
-
         <ol class="slider-pagination">
           <li class="slider-pagination-item">
             <button class="slider-pagination-button slider-pagination-button-current">
@@ -286,7 +267,6 @@
           </li>
         </ol>
       </section>
-
       <section>
         <h3 class="visually-hidden">Каталог товаров</h3>
         <ul class="catalog-line">
@@ -296,7 +276,7 @@
                 alt="Виртуальная реальность.">Виртуальная реальность</a>
           </li>
           <li class="catalog-item">
-            <a class="catalog-link" href="#"><img class="catalog-logo"
+            <a class="catalog-link" href="#"><img class="catalog-logo position-bottom"
                 src="images/index/products-type-list/monopodes-list.svg" width="87" height="117"
                 alt="Моноподы для селфи.">Моноподы<br>для cелфи</a>
           </li>
@@ -322,7 +302,6 @@
           </li>
         </ul>
       </section>
-
       <section class="advantages">
         <h3 class="visually-hidden">Наши преимущества</h3>
         <div class="advantages-wrapper">
@@ -344,7 +323,6 @@
           </ul>
         </div>
       </section>
-
       <a class="delivery" href="#">Доставим редкий товар под заказ
         <svg class="i-ico" width="2" height="12" viewBox="0 0 2 12" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0_11468_3002)">
@@ -358,7 +336,6 @@
           </defs>
         </svg>
       </a>
-
       <div class="about-cont">
         <section class="about">
           <h2 class="about-title">О нас</h2>
@@ -371,7 +348,6 @@
           </ul>
           <a href="#"> Подробнее о нас</a>
         </section>
-
         <section class="cont">
           <h2 class="cont-title">Контакты</h2>
           <p>Вы можете забрать товар сами, заехав в наш офис.<br>Заодно сможете проверить работоспособность покупки.</p>
@@ -386,7 +362,6 @@
           <a class="button-write" href="#"> Напишите нам</a>
         </section>
       </div>
-
       <section class="newsletter">
         <div class="newsletter-wrap">
           <h2>Подпишитесь на рассылку</h2>
@@ -404,19 +379,15 @@
 
     <footer class="footer">
       <div class="footer-container">
-
         <a class="footer-logo" href="#">
           <svg xmlns="http://www.w3.org/2000/svg" width="145" height="36" fill="none" viewBox="0 0 145 36">
             <path fill="#FFC700"
               d="M27.219 0v35.3h-7.606v-2.4c-1.7 1.9-4.102 3.1-7.505 3.1C5.504 36 0 30.2 0 22.7 0 15.2 5.504 9.4 12.108 9.4c3.403 0 5.904 1.2 7.505 3.1V0h7.606Zm-7.606 22.7c0-3.8-2.501-6.2-6.004-6.2-3.502 0-6.004 2.4-6.004 6.2 0 3.8 2.502 6.2 6.004 6.2 3.503-.1 6.004-2.4 6.004-6.2ZM43.73 29.2c2.102 0 3.803-.8 4.803-1.9l6.105 3.5C52.136 34.2 48.433 36 43.63 36c-8.606 0-14.01-5.8-14.01-13.3 0-7.5 5.404-13.3 13.41-13.3 7.405 0 12.809 5.7 12.809 13.3 0 1.1-.1 2.1-.3 3H37.625c1 2.6 3.302 3.5 6.104 3.5Zm4.603-9.1c-.8-2.9-3.102-4-5.403-4-2.902 0-4.804 1.4-5.504 4h10.907ZM82.156 10.1 72.85 35.3h-8.606l-9.306-25.2h8.405l5.304 16 5.304-16h8.205ZM83.457 10.1h7.606v25.2h-7.606V10.1ZM93.665 22.7c0-7.5 5.703-13.3 13.409-13.3 4.903 0 9.206 2.6 11.408 6.5l-6.605 3.8c-.901-1.8-2.702-2.8-4.903-2.8-3.303 0-5.704 2.4-5.704 5.8 0 3.5 2.401 5.8 5.704 5.8 2.201 0 4.103-1.1 4.903-2.8l6.605 3.8c-2.102 3.9-6.405 6.5-11.408 6.5-7.706 0-13.41-5.8-13.41-13.3ZM132.892 29.2c2.101 0 3.802-.8 4.803-1.9l6.104 3.5c-2.502 3.4-6.204 5.2-11.007 5.2-8.606 0-14.01-5.8-14.01-13.3 0-7.5 5.504-13.3 13.409-13.3C139.596 9.4 145 15.1 145 22.7c0 1.1-.1 2.1-.3 3h-17.913c1.001 2.6 3.303 3.5 6.105 3.5Zm4.703-9.1c-.801-2.9-3.102-4-5.404-4-2.902 0-4.803 1.4-5.504 4h10.908ZM83.457 0v10.1L91.063 0h-7.606Z" />
           </svg>
         </a>
-
         <address class="footer-address">Санкт-Петербург, набережная реки Карповки, 5, литера П.</address>
-
         <div class="phone-wrap"><a class="footer-contacts-phone" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
         </div>
-
         <div class="footer-social-list-wrap">
           <h2 class="visually-hidden">Мы в соц сетях</h2>
           <ul class="footer-social-list">
@@ -437,7 +408,6 @@
             </li>
           </ul>
         </div>
-
         <a class="made-in" href="https://htmlacademy.ru">
           <span class="visually-hidden">Сделанно в html academy</span>
           <svg class="html-academy-logo" xmlns="http://www.w3.org/2000/svg" width="115" height="33" fill="none"
@@ -446,7 +416,6 @@
               d="M0 12.9v2.6h2.5v-2.6H0ZM11.6 4.5c-1.6 0-2.8.7-3.6 1.7h-.1V0h-2v15.5h2v-5.3c0-2.1 1.3-3.6 3.3-3.6 1.8 0 2.9 1.4 2.9 3.2v5.7h2V9.4c.1-3-1.8-4.9-4.5-4.9ZM26.6 4.8h-4.8V1.1h-2v3.8h-1.9v2h1.9v6c0 1.7 1 2.7 2.7 2.7h4.1v-2h-3.7c-.7 0-1.1-.4-1.1-1.1V6.8h4.8v-2ZM41.1 4.6c-1.6 0-2.9.8-3.5 2.1h-.1c-.6-1.2-1.8-2.1-3.4-2.1-1.4 0-2.5.8-3.1 1.8h-.1V4.8H29v10.6h2V10c0-2 1-3.5 2.6-3.5 1.5 0 2.4 1 2.4 2.6v6.3h2V9.8c0-2.4 1.4-3.3 2.6-3.3 1.5 0 2.4 1 2.4 2.6v6.3h2V8.9c.1-2.5-1.4-4.3-3.9-4.3ZM47.8 12.7c0 1.7 1 2.7 2.8 2.7h2v-2h-1.7c-.7 0-1.1-.4-1.1-1.1V0h-2v12.7ZM28.9 19.7c-.9-1.1-2.2-1.8-3.9-1.8-3.1 0-5.4 2.3-5.4 5.6s2.3 5.6 5.4 5.6c1.8 0 3-.8 3.8-1.9h.1v1.6h2V18.2h-2v1.5Zm-3.6 7.4c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c0 1.9-1.4 3.6-3.6 3.6ZM44.2 22c-.5-2.4-2.6-4.1-5.4-4.1-3.4 0-5.6 2.5-5.6 5.6 0 3.1 2.2 5.6 5.6 5.6 2.8 0 4.9-1.8 5.4-4.2h-2.1c-.4 1.3-1.7 2.3-3.3 2.3-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6c1.6 0 2.8 1 3.3 2.2h2.1V22ZM55.1 19.7c-.9-1.1-2.2-1.8-3.9-1.8-3.1 0-5.4 2.3-5.4 5.6s2.3 5.6 5.4 5.6c1.8 0 3-.8 3.8-1.9h.1v1.6h2V18.2h-2v1.5Zm-3.6 7.4c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c0 1.9-1.5 3.6-3.6 3.6ZM68.7 19.8c-.9-1.1-2.2-1.9-3.9-1.9-3.1 0-5.4 2.3-5.4 5.6s2.2 5.6 5.4 5.6c1.7 0 3-.8 3.8-1.8h.1v1.5h2V13.4h-2v6.4Zm-3.6 7.3c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c-.1 2-1.5 3.6-3.6 3.6ZM78.3 17.9c-3.3 0-5.5 2.5-5.5 5.6 0 3 2.1 5.6 5.5 5.6 2.5 0 4.5-1.3 5.2-3.6h-2.1c-.5 1-1.6 1.6-3 1.6-1.9 0-3.3-1.3-3.4-2.9h8.8c.2-3.6-2-6.3-5.5-6.3Zm0 1.9c1.7 0 3 1 3.3 2.6h-6.5c.3-1.5 1.5-2.6 3.2-2.6ZM98.2 17.9c-1.6 0-2.9.8-3.6 2h-.1c-.6-1.2-1.8-2-3.4-2-1.4 0-2.5.7-3.1 1.8v-1.5h-1.9v10.6h2v-5.4c0-2 1-3.4 2.6-3.5 1.5 0 2.4 1 2.4 2.6v6.3h2v-5.6c0-2.4 1.4-3.3 2.6-3.3 1.5 0 2.4 1 2.4 2.6v6.3h2v-6.5c.1-2.6-1.4-4.4-3.9-4.4ZM109.4 27l-3.6-8.9h-2.2l4.8 11.6c-.3.9-.7 1.2-1.7 1.2h-2.5v2h2.5c1.8 0 2.8-.8 3.5-2.6l4.7-12.2h-2.1l-3.4 8.9Z" />
           </svg>
         </a>
-
         <ul class="service">
           <li class="service-item">
             <a class="service-link" href="#">
@@ -464,13 +433,10 @@
             </a>
           </li>
         </ul>
-
       </div>
-
     </footer>
 
     <div class="modal-delivery-container">
-
       <div class="modal-delivery">
         <button class="modal-close-button">
           <span class="visually-hidden">Закрыть форму</span>
@@ -489,7 +455,6 @@
             Что нужно привезти:
             <input required type="text" name="request" placeholder="В свободной форме">
           </label>
-
           <div class="quantity-wrap">
             <label for="number"> Количество:</label>
             <div class="number-wrap number-eror">
@@ -500,16 +465,9 @@
                 onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">+</button>
             </div>
           </div>
-
-
           <button class="submit-form" type="submit">Отправить</button>
         </form>
       </div>
-
     </div>
-
-
-
   </body>
-
 </html>
