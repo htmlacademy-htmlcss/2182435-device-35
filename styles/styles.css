@@ -116,6 +116,12 @@ body {
     outline-offset: 2px;
 }
 
+.search-input-wrap {
+    background-image: url(../images/header/search-icon.svg);
+    background-repeat: no-repeat;
+    background-position: center left 15px;
+}
+
 .search-input {
     margin: 0;
     width: 100%;
@@ -333,6 +339,20 @@ body {
     position: relative;
 }
 
+.navigation-link-comparison {
+    background-image: url(../images/header/compare-icon.svg);
+    background-repeat: no-repeat;
+    background-position: center left;
+    padding-left: 21px;
+}
+
+.navigation-link-basket {
+    background-image: url(../images/header/basket-logo.svg);
+    background-repeat: no-repeat;
+    background-position: center left;
+    padding-left: 28px;
+}
+
 .navigation-user .navigation-link-comparison,
 .navigation-user .navigation-link-basket {
     font: 400 18px/30px Rubik;
@@ -450,6 +470,8 @@ body {
 .basket-products-delete {
     color: #FFFFFF;
     background-color: transparent;
+    background-image: url(../images/header/tooltip/remove-from-trash.svg);
+    background-repeat: no-repeat;
     border: 0;
     margin: 0;
     padding: 5px;
@@ -522,10 +544,18 @@ body {
     width: 231px;
 }
 
+.navigation-link-enter-user {
+    background-image: url(../images/header/log-in-icon.svg);
+    background-repeat: no-repeat;
+    background-position: center left;
+    padding-left: 22px;
+}
+
 .enter a {
     font: 400 18px/30px Rubik;
     text-decoration: none;
     color: #000000;
+    padding-left: 27px;
 }
 
 .enter-ico {
@@ -644,6 +674,18 @@ body {
     border: none;
     background-color: transparent;
     cursor: pointer;
+    width: 20px;
+    height: 60px;
+}
+
+.arrow-left {
+    background-image: url(../images/index/popular-products/arrow-left.svg);
+    background-repeat: no-repeat;
+}
+
+.arrow-right {
+    background-image: url(../images/index/popular-products/arrow-right.svg);
+    background-repeat: no-repeat;
 }
 
 .gallery-button:hover {
@@ -854,6 +896,10 @@ body {
 }
 
 .advantages-links button:hover {
+    background: #FFE17F;
+}
+
+.advantages-links button.active:hover {
     background: #000000;
     color: #FFFFFF;
     width: 287px;
@@ -861,14 +907,14 @@ body {
     padding-left: 30px;
 }
 
+.advantages-links button.active:focus-visible,
 .advantages-links button:focus-visible {
-    background: #000000;
-    color: #FFFFFF;
-    width: 287px;
-    padding-right: 30px;
-    padding-left: 30px;
     outline: 2px solid #AF4FFF;
     outline-offset: 2px;
+}
+
+.advantages-links button:active {
+    background: #FFCC33;
 }
 
 .advantages-links button:first-of-type {
@@ -959,6 +1005,9 @@ body {
     position: relative;
     color: #000000;
     text-decoration: none;
+    background-image: url(../images/index/delivery-section/Ellipse.svg);
+    background-repeat: no-repeat;
+    background-position: center right 43px;
 }
 
 .delivery::before {
@@ -975,14 +1024,11 @@ body {
 }
 
 .delivery::after {
-    content: "";
-    background-color: rgba(220, 220, 220, 0.8);
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+    content: url(../images/index/delivery-section/i-icon.svg);
     position: absolute;
-    right: 42px;
-    top: 29px;
+    right: 63px;
+    top: 37px;
+    opacity: 30%;
 }
 
 .i-ico {
@@ -995,10 +1041,9 @@ body {
 
 .delivery:hover::before {
     background-color: #FFC700;
-    ;
 }
 
-.delivery:hover .i-ico {
+.delivery:hover::after {
     opacity: 1;
 }
 
