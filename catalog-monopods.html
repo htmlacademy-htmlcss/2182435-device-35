@@ -5,10 +5,11 @@
         <meta charset="utf-8">
         <title>Моноподы для селфи</title>
         <link rel="stylesheet" href="styles/styles.css">
+        <link rel="icon" href="favicon.ico">
+        <link rel="icon" type="image/png" href="./images/favicon.png">
     </head>
 
     <body>
-
         <header class="header-common">
             <nav class="container-header">
                 <a class="logo" href="#">
@@ -27,7 +28,8 @@
                     </svg>
                     <label class="visually-hidden" for="search-label">Поиск по сайту.</label>
                     <div class="search-input-wrap">
-                        <input class="search-input" placeholder="Поиск по сайту" type="text" name="site-search" id="search-label" required>
+                        <input class="search-input" placeholder="Поиск по сайту" type="text" name="site-search"
+                            id="search-label" required>
                     </div>
                     <button class="search-button" type="submit" name="site-search-button">Найти</button>
                 </form>
@@ -37,7 +39,7 @@
                     </a>
                     <ul class="catalog-list">
                         <li class="catalog-item">
-                            <a class="catalog-link active" href="#">Виртуальная реальность</a>
+                            <a class="catalog-link" href="#">Виртуальная реальность</a>
                         </li>
                         <li class="catalog-item">
                             <a class="catalog-link" href="#">Моноподы для cелфи</a>
@@ -58,7 +60,7 @@
                 </section>
                 <ul class="navigation-service">
                     <li class="navigation-item">
-                        <a class="navigation-link active" href="#">
+                        <a class="navigation-link" href="#">
                             <h2>ДОСТАВКА</h2>
                         </a>
                     </li>
@@ -142,7 +144,6 @@
         </header>
 
         <main class="monopods-main">
-
             <header class="monopods-header">
                 <h1 class="monopods-header-title">Моноподы для селфи</h1>
                 <ul class="breadcrumbs">
@@ -157,15 +158,12 @@
                     </li>
                 </ul>
             </header>
-
             <div class="wrapper-filter-product">
                 <div class="wrapper-filter">
                     <form class="monopods-filter" action="https://echo.htmlacademy.ru/" method="get">
                         <h3>фильтр:</h3>
-
                         <fieldset class="filter-group">
                             <legend class="filter-title">Стоимость:</legend>
-
                             <div class="range">
                                 <div class="range-scale">
                                     <div class="range-bar">
@@ -177,7 +175,6 @@
                                         </button>
                                     </div>
                                 </div>
-
                                 <div class="range-wrapper-inputs">
                                     <label class="catalog-filter-label">
                                         от <input class="range-input" type="number" value="0" name="min-price"></label>
@@ -187,48 +184,49 @@
                                 </div>
                             </div>
                         </fieldset>
-
                         <fieldset class="filter-group">
                             <legend class="filter-title">Цвет</legend>
                             <ul class="filter-list">
                                 <li class="filter-item">
                                     <label class="control">
-                                        <input class="visually-hidden control-input" type="checkbox" name="black"
-                                            checked>
+                                        <input class="visually-hidden control-input" type="checkbox" name="color"
+                                            value="black" checked>
                                         <span class="control-mark"></span>
                                         Черный
                                     </label>
                                 </li>
                                 <li class="filter-item">
                                     <label class="control">
-                                        <input class="visually-hidden control-input" type="checkbox" name="white"
-                                            checked>
+                                        <input class="visually-hidden control-input" type="checkbox" name="color"
+                                            value="white" checked>
                                         <span class="control-mark"></span>
                                         Белый
                                     </label>
                                 </li>
                                 <li class="filter-item">
                                     <label class="control">
-                                        <input class="visually-hidden control-input" type="checkbox" name="blue">
+                                        <input class="visually-hidden control-input" type="checkbox" name="color"
+                                            value="blue">
                                         <span class="control-mark"></span>
                                         Синий
                                     </label>
                                 </li>
                                 <li class="filter-item">
                                     <label class="control">
-                                        <input class="visually-hidden control-input" type="checkbox" name="red">
+                                        <input class="visually-hidden control-input" type="checkbox" name="color"
+                                            value="red">
                                         <span class="control-mark"></span>
                                         Красный
                                     </label>
                                 </li>
                                 <li class="filter-item">
                                     <label class="control">
-                                        <input class="control-input visually-hidden" type="checkbox" name="pink">
+                                        <input class="control-input visually-hidden" type="checkbox" name="color"
+                                            value="pink">
                                         <span class="control-mark"></span>
                                         Розовый
                                     </label>
                                 </li>
-
                             </ul>
                         </fieldset>
                         <fieldset class="filter-group">
@@ -258,11 +256,11 @@
                 <div class="wrapper-products">
                     <section class="sorting">
                         <h3>сортировка:</h3>
-                        <select class="select-control">
-                            <option value="popular">Популярные</option>
-                            <option value="cheap">Дешевые</option>
-                            <option value="expensive">Дорогие</option>
-                        </select>
+                                <select class="select-control">
+                                <option value="popular">Популярные</option>
+                                <option value="cheap">Дешевые</option>
+                                <option value="expensive">Дорогие</option>
+                            </select>
                         <div>
                             <button class="button-to-more" type="button" name="sorting" value="to-more"><span
                                     class="visually-hidden">
@@ -272,7 +270,6 @@
                                     от большего к меньшему</span></button>
                         </div>
                     </section>
-
                     <ul class="product-list">
                         <li class="product-card">
                             <a class="product-card-link" href="#">
@@ -311,7 +308,6 @@
                             </a>
                         </li>
                     </ul>
-
                     <div class="wrap-pagination-all">
                         <button class="button-pagination-show-more" type="button" name="show-more"
                             value="show-more">Загрузить ещё</button>
@@ -399,7 +395,5 @@
                 </ul>
             </div>
         </footer>
-
     </body>
-
 </html>
