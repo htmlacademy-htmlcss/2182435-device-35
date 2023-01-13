@@ -219,7 +219,7 @@ body {
     position: relative;
 }
 
-.catalog h2 {
+.navigation-link {
     margin: 0;
     padding: 0;
     font: 800 18px/21px Raleway;
@@ -317,7 +317,7 @@ body {
     display: block;
 }
 
-.navigation-service h2 {
+.navigation-link {
     font: 800 18px/21px Raleway;
     letter-spacing: 0.2em;
     margin: 0;
@@ -389,6 +389,9 @@ body {
 
 .navigation-link-exit {
     opacity: 30%;
+}
+
+.hidden {
     display: none;
 }
 
@@ -492,7 +495,8 @@ body {
     margin: 0 20px 0 20px;
 }
 
-.counters span b {
+.number-of-products,
+.total-amount {
     font-weight: normal;
 }
 
@@ -548,14 +552,13 @@ body {
     background-image: url(../images/header/log-in-icon.svg);
     background-repeat: no-repeat;
     background-position: center left;
-    padding-left: 22px;
+    padding-left: 26px;
 }
 
 .enter a {
     font: 400 18px/30px Rubik;
     text-decoration: none;
     color: #000000;
-    padding-left: 27px;
 }
 
 .enter-ico {
@@ -740,6 +743,7 @@ body {
     margin: 0;
     padding: 0;
     margin-bottom: 29px;
+    display: block;
 }
 
 .slide-description-wrapper {
@@ -822,37 +826,42 @@ body {
     list-style-type: none;
 }
 
-.catalog-line .catalog-item .catalog-logo {
+.catalog-logo {
     min-height: 160px;
     min-width: 160px;
     object-fit: none;
     background-color: #FFE17F;
-    margin-bottom: 26px;
+    margin-bottom: 25px;
 }
 
-.catalog-line .catalog-item .catalog-link {
+.catalog-link {
+    text-decoration: none;
+    display: block;
+}
+
+.catalog-link h3{
     width: 160px;
     font: 800 18px/24px Raleway;
     letter-spacing: -0.02em;
     display: block;
     color: #000000;
-    text-decoration: none;
+    margin: 0;
 }
 
-.catalog-line .catalog-item .catalog-link:hover .catalog-logo {
+.catalog-link:hover .catalog-logo {
     background-color: #FFC700;
 }
 
-.catalog-line .catalog-item .catalog-link:focus-visible {
+.catalog-link:focus-visible {
     outline: 2px solid #AF4FFF;
     outline-offset: 2px;
 }
 
-.catalog-line .catalog-item .catalog-link:active {
+.catalog-link:active {
     opacity: 30%;
 }
 
-.catalog-line .catalog-item:nth-child(2) .catalog-logo,
+.catalog-item:nth-child(2) .catalog-logo,
 .catalog-line .position-bottom {
     object-position: bottom;
 }
@@ -938,7 +947,7 @@ body {
     display: none;
 }
 
-.advantage-description li b {
+.advantage-heading {
     display: block;
     font: 800 50px/50px Raleway;
     margin-bottom: 34px;
@@ -1108,14 +1117,14 @@ body {
     font-style: normal;
 }
 
-.about ul {
+.list-transport {
     margin: 0;
     padding: 0;
     position: relative;
     margin-bottom: 30px;
 }
 
-.about ul li {
+.list-transport li {
     font: 700 18px/20px Rubik;
     letter-spacing: -0.01em;
     margin: 0;
@@ -1124,7 +1133,7 @@ body {
     list-style-type: none;
 }
 
-.about ul li::before {
+.list-transport li::before {
     content: "•";
     color: #FFC700;
     padding-right: 23px;
@@ -1512,7 +1521,7 @@ body {
     text-decoration-line: none;
 }
 
-.service-link h2 {
+.service-link {
     font: 800 18px/21px Raleway;
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -1521,7 +1530,7 @@ body {
     border-bottom: 2px solid #444444;
 }
 
-.service-link h2:hover {
+.service-link:hover {
     color: #FFC700;
     border-bottom: 2px solid #FFC700;
 }
@@ -1532,7 +1541,7 @@ body {
     outline-offset: 2px;
 }
 
-.service-link h2:active {
+.service-link:active {
     color: #FFC700;
     border-bottom: 2px solid #FFC700;
     opacity: 0.3;
@@ -1570,7 +1579,7 @@ body {
     gap: 62px 40px;
 }
 
-.modal-form label input {
+.input-modal {
     margin: 0;
     padding: 20px;
     background-color: #F0F0F0;
@@ -1579,11 +1588,11 @@ body {
     margin-top: 14px;
 }
 
-.modal-form label input:hover {
+.input-modal:hover {
     background-color: #DCDCDC;
 }
 
-.modal-form label input:focus-visible {
+.input-modal:focus-visible {
     outline: 2px solid #AF4FFF;
     outline-offset: 2px;
 }
@@ -1592,7 +1601,7 @@ body {
     width: 360px;
 }
 
-.modal-form .name input {
+.name .input-modal {
     background-image: url(../images/modal/name.svg);
     background-repeat: no-repeat;
     background-position: center right 21px;
@@ -1603,7 +1612,7 @@ body {
     position: relative;
 }
 
-.modal-form .mail input {
+.mail .input-modal {
     background-image: url(../images/modal/mail.svg);
     background-repeat: no-repeat;
     background-position: center right 21px;
@@ -1617,7 +1626,7 @@ body {
     bottom: -23px;
 }
 
-.modal-form .mail .mail-eror {
+.mail-eror {
     outline: 2px solid #ff0000;
 }
 
@@ -1733,10 +1742,9 @@ body {
 .number-wrap input {
     font: 400 16px/20px Rubik;
     text-align: center;
-    padding: 20px;
     background-color: #F0F0F0;
     border: 0;
-    width: 20px;
+    width: 60px;
 }
 
 .number-wrap input[type="number"]::-webkit-outer-spin-button,
