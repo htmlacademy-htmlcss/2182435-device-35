@@ -1862,7 +1862,7 @@ body {
     margin-top: 26px;
 }
 
-.monopods-filter h3 {
+.monopods-filter p {
     font: 800 16px/18px Raleway;
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -2124,7 +2124,7 @@ body {
     position: relative;
 }
 
-.sorting h3 {
+.sorting p {
     font: 800 16px/18px Raleway;
     letter-spacing: 0.2em;
     text-transform: uppercase;
