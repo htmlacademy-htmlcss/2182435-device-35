@@ -94,7 +94,7 @@ body {
 .container-header {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
     margin: 0 auto;
     width: 1040px;
@@ -147,6 +147,7 @@ body {
     border-radius: 0 20px 20px 0;
     font: 400 16px/20px Rubik;
     cursor: pointer;
+    border: 2px solid #000000;
 }
 
 .search-button:hover {
@@ -315,6 +316,7 @@ body {
     text-decoration: none;
     color: #000000;
     display: block;
+    margin-bottom: 15px;
 }
 
 .navigation-link {
@@ -333,6 +335,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     position: relative;
+    margin-bottom: 5px;
 }
 
 .navigation-link-basket {
@@ -379,6 +382,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-bottom: 5px;
 }
 
 .navigation-link-enter-user {
@@ -871,8 +875,10 @@ body {
 
 .advantages {
     margin: 0 auto 70px auto;
-    background: linear-gradient(to bottom, #FFFFFF 26%, #F0F0F0 26%);
+    background-color: #F0F0F0;
     padding-bottom: 72px;
+    position: relative;
+    box-shadow: 0 102px 0 0 #ffffff inset;
 }
 
 .advantages-wrapper {
@@ -1003,18 +1009,18 @@ body {
 
 .delivery {
     display: block;
-    width: 1160px;
+    width: 880px;
     background-color: #F0F0F0;
     font: 800 20px/23px Raleway;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     text-align: center;
     margin: 0 auto 70px auto;
-    padding: 41px 0 36px 0;
+    padding: 41px 140px 36px 140px;
     position: relative;
     color: #000000;
     text-decoration: none;
-    background-image: url(../images/index/delivery-section/Ellipse.svg);
+    background-image: url(../images/index/delivery-section/i-icon.svg);
     background-repeat: no-repeat;
     background-position: center right 43px;
 }
@@ -1025,19 +1031,11 @@ body {
     background-color: #FFE17F;
     background-repeat: no-repeat;
     width: 125px;
-    height: 100px;
+    height: 100%;
     background-position: 50% 50%;
     position: absolute;
     left: 0;
     top: 0;
-}
-
-.delivery::after {
-    content: url(../images/index/delivery-section/i-icon.svg);
-    position: absolute;
-    right: 63px;
-    top: 37px;
-    opacity: 30%;
 }
 
 .i-ico {
@@ -1050,6 +1048,10 @@ body {
 
 .delivery:hover::before {
     background-color: #FFC700;
+}
+
+.delivery:hover {
+    background-image: url(../images/index/delivery-section/i-icon-hower.svg);
 }
 
 .delivery:hover::after {
@@ -1563,7 +1565,10 @@ body {
 }
 
 .modal-delivery {
-    position: relative;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     margin: auto;
     padding: 64px 70px;
     background-color: #ffffff;
@@ -1880,6 +1885,7 @@ body {
     font: 400 16px/20px Rubik;
     margin-left: 37px;
     position: relative;
+    display: block;
 }
 
 .control:focus-within::before {
@@ -1888,7 +1894,7 @@ body {
     height: 24px;
     border: 2px solid #AF4FFF;
     position: absolute;
-    top: -7px;
+    top: -4px;
     left: -41px;
 }
 
@@ -1928,7 +1934,11 @@ body {
 
 
 .filter-item:not(:last-child) {
-    margin-bottom: 13px;
+    margin-bottom: 17px;
+}
+
+.filter-item:last-child {
+    margin-bottom: 4px;
 }
 
 .monopods-filter .button {
@@ -2009,7 +2019,7 @@ body {
     border-radius: 50%;
     position: absolute;
     left: -31px;
-    top: 4px;
+    top: 6px;
 }
 
 
@@ -2280,7 +2290,7 @@ body {
 }
 
 .new::after {
-    content: url(../images/catalog/NEW.svg);
+    content: url(../images/catalog/new.svg);
     width: 60px;
     height: 60px;
     position: absolute;
